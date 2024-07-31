@@ -40,12 +40,15 @@ Simulation Development Epidemic is a web application designed to manage and visu
    git clone https://github.com/yourusername/simulation-development-epidemic.git
 
 2. Navigate to the backend directory:
+   ```bash
    cd simulation-development-epidemic/backend
 
 3. Install backend dependencies:
+   ```bash
    ./mvnw clean install
 
 4. Run the backend server:
+   ```bash
    ./mvnw spring-boot:run
 
    The backend server will start on port 8080.
@@ -53,13 +56,16 @@ Simulation Development Epidemic is a web application designed to manage and visu
 ### Frontend
 
 1. Navigate to the frontend directory:
+  ```bash
    cd simulation-development-epidemic/frontend
 
 2. Install frontend dependencies:
-   npm install
+  ```bash
+  npm install
 
 3. Start the frontend development server:
-   ng serve
+  ```bash
+  ng serve
 
    The frontend application will be available at http://localhost:4200.
 
