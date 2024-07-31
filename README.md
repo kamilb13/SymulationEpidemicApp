@@ -78,7 +78,7 @@ Simulation Development Epidemic is a web application designed to manage and visu
 ## API Endpoints
 
 ### Population
-    ```bash
+    
     - GET /getPopulationData/{id}
       Retrieves population data for a specific simulation ID.
       Parameters:
