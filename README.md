@@ -56,16 +56,16 @@ Simulation Development Epidemic is a web application designed to manage and visu
 ### Frontend
 
 1. Navigate to the frontend directory:
-  ```bash
+   ```bash
    cd simulation-development-epidemic/frontend
 
 2. Install frontend dependencies:
-  ```bash
-  npm install
+    ```bash
+    npm install
 
 3. Start the frontend development server:
-  ```bash
-  ng serve
+    ```bash
+    ng serve
 
    The frontend application will be available at http://localhost:4200.
 
