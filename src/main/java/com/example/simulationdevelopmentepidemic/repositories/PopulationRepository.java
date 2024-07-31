@@ -10,7 +10,4 @@ import java.util.List;
 public interface PopulationRepository extends JpaRepository<Population, Integer> {
     List<Population> findBySymulationId(int symulationId);
     void deleteBySymulationId(int symulationId);
-
-    //@Query("SELECT p FROM Population p WHERE p.symulationId = :symulationId ORDER BY p.day ASC")
-    //List<Population> findBySymulationIdOrderByDayAsc(@Param("symulationId") int symulationId);
 }

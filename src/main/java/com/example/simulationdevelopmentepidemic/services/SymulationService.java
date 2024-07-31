@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class SymulationService {
@@ -28,6 +29,9 @@ public class SymulationService {
         return symulationRepository.findAll();
     }
 
+    public Optional<Symulation> getSymulation(int id) {
+        return symulationRepository.findById(id);
+    }
     public Symulation saveSymulation(Symulation symulation) {
         Symulation savedSymulation = symulationRepository.save(symulation);
         populationService.createInitialPopulation(savedSymulation);

@@ -1,0 +1,16 @@
+button.btn {
+  margin-right: 5px;
+}
+
+.thead-dark th {
+  text-align: center;
+}
+
+td {
+  vertical-align: middle;
+}
+
+.margin-left {
+  margin-left: 40px;
+}
+

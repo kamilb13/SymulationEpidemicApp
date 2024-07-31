@@ -39,14 +39,6 @@ public class PopulationService {
     }
 
     public void iterationsForSymulation(Symulation symulation, Population initialPopulation) {
-        /*
-        ● M spośród zarażonych Tm dni wcześniej przenosi się niestety z grupy osób zakażonych do
-        grupy osób zmarłych
-        ● Wszystkie osoby zarażone Ti dni wcześniej (i żywe...) przenoszą się z grupy osób zakażonych do
-        grupy osób, które wyzdrowiały i nabyły odporność
-        ● Każda zarażona osoba zaraża R zdrowych podatnych na infekcję osób
-        */
-
         int pi = initialPopulation.getPi();     // zakażeni
         int pv = initialPopulation.getPv();     // zdrowi
         int pm = initialPopulation.getPm();     // zmarli
@@ -65,10 +57,12 @@ public class PopulationService {
         Queue<Integer> deaths = new LinkedList<>();     // kolejka zgonów
 
         for (int i = 0; i < numberDays; i++){
+
             // zarazeni
             int zarazeni = (int) ((r/100) * pv);
             pi = pi + zarazeni;
             pv = pv - zarazeni;
+
             // dodaje zarazonych do kolejki zarazen
             for (int j = 1; j < zarazeni; j++){
                 infections.add(i);
@@ -76,6 +70,7 @@ public class PopulationService {
                     deaths.add(i);
                 }
             }
+
             // usuwam wyzdrowialych z grupy zakazonych po "ti" dniach
             while (!infections.isEmpty() && i - infections.peek() >= ti) {
                 infections.poll();
@@ -84,12 +79,14 @@ public class PopulationService {
             }
 
             System.out.println(infections);
+
             // zarazeni do grupa zmarlych
             while (!deaths.isEmpty() && i - deaths.peek() >= tm) {
                 deaths.poll();
                 pm++; // zmarli++
                 pi--; // zakazeni--
             }
+
             // while(infections){
             //
             // }
@@ -113,5 +110,9 @@ public class PopulationService {
         System.out.println(symulation);
         System.out.println(symulation.getId());
         createInitialPopulation(symulation);
+    }
+
+    public List<Population> getPopulationData(int id) {
+        return populationRepository.findBySymulationId(id);
     }
 }

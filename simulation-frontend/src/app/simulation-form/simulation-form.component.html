@@ -1,0 +1,38 @@
+<div class="container mt-4 custom-margin">
+  <p class="h4 text-center">{{ isEditMode ? 'Edit Simulation' : 'Create Simulation' }}</p>
+  <form (ngSubmit)="onSubmit()" #symulationForm="ngForm" class="mt-3 mx-auto form-width">
+    <div class="form-group">
+      <label for="n">Name:</label>
+      <input type="text" id="n" class="form-control" required [(ngModel)]="symulation.n" name="n">
+    </div>
+    <div class="form-group">
+      <label for="p">Population:</label>
+      <input type="number" id="p" class="form-control" required [(ngModel)]="symulation.p" name="p">
+    </div>
+    <div class="form-group">
+      <label for="i">Infected:</label>
+      <input type="number" id="i" class="form-control" required [(ngModel)]="symulation.i" name="i">
+    </div>
+    <div class="form-group">
+      <label for="r">R:</label>
+      <input type="number" step="0.01" id="r" class="form-control" required [(ngModel)]="symulation.r" name="r">
+    </div>
+    <div class="form-group">
+      <label for="m">Mortality:</label>
+      <input type="number" step="0.01" id="m" class="form-control" required [(ngModel)]="symulation.m" name="m">
+    </div>
+    <div class="form-group">
+      <label for="ti">Days to Recovery:</label>
+      <input type="number" id="ti" class="form-control" required [(ngModel)]="symulation.ti" name="ti">
+    </div>
+    <div class="form-group">
+      <label for="tm">Days to Death:</label>
+      <input type="number" id="tm" class="form-control" required [(ngModel)]="symulation.tm" name="tm">
+    </div>
+    <div class="form-group">
+      <label for="ts">Simulation Days:</label>
+      <input type="number" id="ts" class="form-control" required [(ngModel)]="symulation.ts" name="ts">
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">{{ isEditMode ? 'Update Simulation' : 'Create Simulation' }}</button>
+  </form>
+</div>

@@ -1,0 +1,22 @@
+<h2 class="my-4 margin-left">List of Symulations</h2>
+<button class="btn btn-primary mb-3 margin-left" routerLink="/add-simulation">Add Simulation</button>
+<table class="table table-striped ">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let symulation of symulations">
+    <td>{{ symulation.id }}</td>
+    <td>{{ symulation.n }}</td>
+    <td>
+      <button class="btn btn-warning btn-sm mr-2" (click)="editSymulation(symulation.id)">Edit</button>
+      <button class="btn btn-danger btn-sm mr-2" (click)="deleteSymulation(symulation.id)">Delete</button>
+      <button class="btn btn-info btn-sm" (click)="viewChart(symulation.id)">View Chart</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

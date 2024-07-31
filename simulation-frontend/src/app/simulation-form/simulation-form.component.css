@@ -1,0 +1,22 @@
+.my-margin{
+  margin-top: 15px;
+}
+
+.custom-margin {
+  margin-left: 40px;
+}
+
+.form-width {
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.25rem;
+}
