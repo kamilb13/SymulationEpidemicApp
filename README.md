@@ -19,7 +19,11 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## About
 
-Simulation Development Epidemic is a web application designed to manage and visualize epidemic simulations. It provides functionality to create, view, update, and delete simulations, as well as visualize the simulation data through charts.
+Simulation Development Epidemic is a web application designed to manage and visualize epidemic simulations. It provides functionality to create, view, update, and delete simulations, as well as visualize the simulation data through charts. 
+Technologies used: 
+- Java, Spring Boot, Lombok
+- Angular, Chart.js, Bootstrap
+- PostgreSQL
 
 ## Features
 
