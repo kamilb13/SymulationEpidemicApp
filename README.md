@@ -78,22 +78,22 @@ Simulation Development Epidemic is a web application designed to manage and visu
 ## API Endpoints
 
 ### Population
-
+```bash
 - GET /getPopulationData/{id}
   Retrieves population data for a specific simulation ID.
   Parameters:
   - id (int): ID of the simulation
 
 ### Symulation
-
+```bash
 - GET /getSymulations
   Retrieves a list of all simulations.
-
+```bash
 - GET /getSymulation/{id}
   Retrieves details of a specific simulation by ID.
   Parameters:
   - id (int): ID of the simulation
-
+```bash
 - POST /saveSymulation
   Creates a new simulation.
   Request Body:
@@ -107,7 +107,7 @@ Simulation Development Epidemic is a web application designed to manage and visu
     "tm": 0,
     "ts": 0
   }
-
+```bash
 - PUT /updateSymulation/{id}
   Updates an existing simulation by ID.
   Parameters:
@@ -123,7 +123,7 @@ Simulation Development Epidemic is a web application designed to manage and visu
     "tm": 0,
     "ts": 0
   }
-
+```bash
 - DELETE /deleteSymulation/{id}
   Deletes a simulation by ID.
   Parameters:
