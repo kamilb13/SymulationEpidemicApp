@@ -125,7 +125,6 @@ Simulation Development Epidemic is a web application designed to manage and visu
       }
 
     - DELETE /deleteSymulation/{id}
-    
       Deletes a simulation by ID.
       Parameters:
       - id (int): ID of the simulation
